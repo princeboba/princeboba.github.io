@@ -1,0 +1,5 @@
+#Run with tidy -config tidy-config.txt -m index.html
+indent: auto
+indent-spaces: 2
+quiet: yes
+tidy-mark: no
