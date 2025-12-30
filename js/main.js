@@ -249,4 +249,19 @@ jQuery(document).ready(function($) {
   };
   siteScroll();
 
+  var progressiveImages = function() {
+    $(window).on('load', function() {
+      $('img[data-src]').each(function() {
+        var img = $(this);
+        var fullSrc = img.data('src');
+        var newImg = new Image();
+        newImg.onload = function() {
+          img.attr('src', fullSrc);
+        };
+        newImg.src = fullSrc;
+      });
+    });
+  };
+  progressiveImages();
+
 });
